@@ -4,51 +4,84 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Jesus Presente</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
     body {
-      background: url('https://scontent.fmgf9-1.fna.fbcdn.net/v/t39.30808-6/499963198_122107106522876313_169838879953277089_n.png?...') no-repeat center center fixed;
-      background-size: cover;
-      text-align: center;
-      padding-top: 100px;
+      margin: 0;
+      padding: 0;
       font-family: Arial, sans-serif;
       color: #fff;
+      text-align: center;
+      background: url('images/capa-facebook.png') no-repeat center center fixed;
+      background-size: cover;
+      position: relative;
     }
+
+    /* Fundo escuro translúcido por cima da imagem */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5); /* Aumente ou diminua a opacidade aqui */
+      z-index: 0;
+    }
+
+    .content {
+      position: relative;
+      z-index: 1;
+      padding-top: 100px;
+    }
+
     h1 {
       font-size: 48px;
       text-shadow: 2px 2px 5px #000;
     }
+
     p {
       font-size: 20px;
       text-shadow: 1px 1px 3px #000;
     }
+
     .social-buttons {
-      margin-top: 30px;
+      margin-top: 40px;
     }
+
     .social-buttons a {
       display: inline-block;
-      margin: 0 10px;
-      font-size: 30px;
-      color: white;
-      background-color: rgba(0, 0, 0, 0.5);
-      padding: 15px;
-      border-radius: 50%;
-      text-decoration: none;
-      transition: background 0.3s;
+      margin: 0 15px;
     }
-    .social-buttons a:hover {
-      background-color: rgba(255, 255, 255, 0.3);
+
+    .social-buttons img {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      transition: transform 0.3s;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+    }
+
+    .social-buttons img:hover {
+      transform: scale(1.1);
     }
   </style>
 </head>
 <body>
-  <h1>Jesus Presente</h1>
-  <p>Este site está em construção. Volte em breve!</p>
+  <div class="content">
+    <h1>Jesus Presente</h1>
+    <p>Este site está em construção. Volte em breve!</p>
 
-  <div class="social-buttons">
-    <a href="https://www.facebook.com/profile.php?id=61576289416243" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
-    <a href="https://www.tiktok.com/@seudominio" target="_blank" title="TikTok"><i class="fab fa-tiktok"></i></a>
-    <a href="https://www.instagram.com/seudominio" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+    <div class="social-buttons">
+      <a href="https://www.facebook.com/profile.php?id=61576289416243" target="_blank" title="Facebook">
+        <img src="images/facebook.svg" alt="Facebook">
+      </a>
+      <a href="https://www.tiktok.com/@seudominio" target="_blank" title="TikTok">
+        <img src="images/tiktok.svg" alt="TikTok">
+      </a>
+      <a href="https://www.instagram.com/seudominio" target="_blank" title="Instagram">
+        <img src="images/instagram.png" alt="Instagram">
+      </a>
+    </div>
   </div>
 </body>
 </html>
