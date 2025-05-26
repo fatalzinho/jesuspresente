@@ -2,28 +2,71 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Jesus Presente</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Jesus Presente - Em Construção</title>
   <style>
     body {
       background: url('https://scontent.fmgf9-1.fna.fbcdn.net/v/t39.30808-6/499963198_122107106522876313_169838879953277089_n.png?_nc_cat=106&ccb=1-7&_nc_sid=cc71e4&_nc_eui2=AeE8-qL7ab9cHhv8e2FLv1oI-5Z5N-S3oCP7lnk35LegI8GnGFcK8EUixt3BH45NF2EaiTwUzmA0R-Txm69nKB5s&_nc_ohc=f_gfP0Tt0bgQ7kNvwGNp7qR&_nc_oc=AdnyWZL8cW_wvH4qoTy9irApJAT_Agq0fJZ8nHiCh8iNfqMzhKz-kX4niPJ0ZLz2imV5SVnYCxK6NGP5ewR7UXNN&_nc_zt=23&_nc_ht=scontent.fmgf9-1.fna&_nc_gid=B7nk-cAgUrXJWv87wkJfOA&oh=00_AfJd8b1AY3a2PRzW4BUS4jQaHN5WzZRsjIWx7gEugYApsA&oe=683A8D24') no-repeat center center fixed;
       background-size: cover;
-      text-align: center;
-      padding-top: 100px;
       font-family: Arial, sans-serif;
       color: white;
-      text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+      text-align: center;
+      padding-top: 100px;
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
     }
     h1 {
       font-size: 48px;
+      margin-bottom: 0;
     }
     p {
       font-size: 20px;
+      margin-top: 5px;
+      margin-bottom: 40px;
     }
+    .social-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+    .social-buttons a {
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+      line-height: 50px;
+      border-radius: 50%;
+      background-color: rgba(0,0,0,0.5);
+      color: white;
+      font-size: 28px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+    .social-buttons a:hover {
+      background-color: rgba(0,0,0,0.8);
+    }
+    /* Cores customizadas por rede social */
+    .facebook { background-color: #3b5998; }
+    .facebook:hover { background-color: #2d4373; }
+    .instagram { background-color: #e4405f; }
+    .instagram:hover { background-color: #b92a47; }
+    .tiktok { background-color: #010101; }
+    .tiktok:hover { background-color: #333333; }
   </style>
+  <!-- Link para Font Awesome CDN para ícones -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
   <h1>Jesus Presente</h1>
   <p>Este site está em construção. Volte em breve!</p>
+  <div class="social-buttons">
+    <a href="https://www.facebook.com/jesuspresente" target="_blank" rel="noopener" class="facebook" aria-label="Facebook">
+      <i class="fab fa-facebook-f"></i>
+    </a>
+    <a href="https://www.instagram.com/jesuspresente" target="_blank" rel="noopener" class="instagram" aria-label="Instagram">
+      <i class="fab fa-instagram"></i>
+    </a>
+    <a href="https://www.tiktok.com/@jesuspresente" target="_blank" rel="noopener" class="tiktok" aria-label="TikTok">
+      <i class="fab fa-tiktok"></i>
+    </a>
+  </div>
 </body>
 </html>
