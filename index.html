@@ -6,25 +6,66 @@
   <title>Jesus Presente</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
     body {
-      background: url('https://scontent.fmgf9-1.fna.fbcdn.net/v/t39.30808-6/499963198_122107106522876313_169838879953277089_n.png?...') no-repeat center center fixed;
-      background-size: cover;
-      text-align: center;
-      padding-top: 100px;
       font-family: Arial, sans-serif;
       color: #fff;
+      text-align: center;
+      position: relative;
+      height: 100vh;
+      overflow: hidden;
     }
+
+    /* Fundo com imagem */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('images/fundo.png') no-repeat center center fixed;
+      background-size: cover;
+      z-index: -2;
+    }
+
+    /* Camada escura por cima da imagem */
+    body::after {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.4); /* Transparência do fundo */
+      z-index: -1;
+    }
+
+    .content {
+      position: relative;
+      z-index: 1;
+      padding-top: 100px;
+    }
+
     h1 {
       font-size: 48px;
       text-shadow: 2px 2px 5px #000;
     }
+
     p {
       font-size: 20px;
       text-shadow: 1px 1px 3px #000;
     }
+
     .social-buttons {
       margin-top: 30px;
     }
+
     .social-buttons a {
       display: inline-block;
       margin: 0 10px;
@@ -36,19 +77,22 @@
       text-decoration: none;
       transition: background 0.3s;
     }
+
     .social-buttons a:hover {
       background-color: rgba(255, 255, 255, 0.3);
     }
   </style>
 </head>
 <body>
-  <h1>Jesus Presente</h1>
-  <p>Este site está em construção. Volte em breve!</p>
+  <div class="content">
+    <h1>Jesus Presente</h1>
+    <p>Este site está em construção. Volte em breve!</p>
 
-  <div class="social-buttons">
-    <a href="https://www.facebook.com/profile.php?id=61576289416243" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
-    <a href="https://www.tiktok.com/@seudominio" target="_blank" title="TikTok"><i class="fab fa-tiktok"></i></a>
-    <a href="https://www.instagram.com/seudominio" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+    <div class="social-buttons">
+      <a href="https://www.facebook.com/profile.php?id=61576289416243" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://www.tiktok.com/@seudominio" target="_blank" title="TikTok"><i class="fab fa-tiktok"></i></a>
+      <a href="https://www.instagram.com/seudominio" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+    </div>
   </div>
 </body>
 </html>
