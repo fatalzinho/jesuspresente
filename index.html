@@ -46,26 +46,19 @@
       z-index: -1;
     }
 
-    /* Vídeo no centro como elemento visual */
-    #bg-video {
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      width: 80vw;
-      max-width: 600px;
-      transform: translate(-50%, -50%);
-      z-index: -3;
-      opacity: 0.2;
-      pointer-events: none;
-      border-radius: 20px;
-    }
-
     .content {
       position: relative;
       z-index: 1;
       padding-top: 100px;
     }
-
+video {
+      width: 80%;
+      max-width: 720px;
+      border: 2px solid #fff;
+      border-radius: 12px;
+      margin: 20px 0;
+      box-shadow: 0 0 15px rgba(0,0,0,0.5);
+    }
     h1 {
       font-size: 48px;
       text-shadow: 2px 2px 5px #000;
@@ -98,16 +91,15 @@
   </style>
 </head>
 <body>
-
-  <!-- Vídeo decorativo -->
-  <video autoplay muted loop playsinline id="bg-video">
-    <source src="image/evangelho.mp4" type="video/mp4">
-    Seu navegador não suporta vídeo em HTML5.
-  </video>
-
   <div class="content">
     <h1>Jesus Presente</h1>
     <p>Este site está em construção. Volte em breve!</p>
+
+     <!-- VÍDEO -->
+    <video controls>
+      <source src="image/evangelho.mp4" type="video/mp4">
+      Seu navegador não suporta o vídeo.
+    </video>
 
     <div class="social-buttons">
       <a href="https://www.facebook.com/profile.php?id=61576289416243" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
@@ -115,6 +107,5 @@
       <a href="https://www.instagram.com/seudominio" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
     </div>
   </div>
-
 </body>
 </html>
