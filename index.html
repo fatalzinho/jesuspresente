@@ -50,14 +50,18 @@
       padding-top: 50px;
     }
 
-    video {
-      width: 80%;
-      max-width: 720px;
-      border: 2px solid #fff;
-      border-radius: 12px;
-      margin: 20px 0;
-      box-shadow: 0 0 15px rgba(0,0,0,0.5);
-    }
+    #bg-video {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 80vw;
+  max-width: 600px;
+  transform: translate(-50%, -50%);
+  z-index: -3;
+  opacity: 0.2; /* mais discreto */
+  pointer-events: none; /* para não atrapalhar clique nos botões */
+  border-radius: 20px;
+}
 
     h1 {
       font-size: 48px;
@@ -96,10 +100,10 @@
     <p>Este site está em construção. Volte em breve!</p>
 
     <!-- VÍDEO -->
-    <video controls>
-      <source src="image/evangelho.mp4" type="video/mp4">
-      Seu navegador não suporta o vídeo.
-    </video>
+   <video autoplay muted loop playsinline id="bg-video">
+  <source src="image/evangelho.mp4" type="video/mp4">
+  Seu navegador não suporta vídeo em HTML5.
+</video>
 
     <div class="social-buttons">
       <a href="https://www.facebook.com/profile.php?id=61576289416243" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
